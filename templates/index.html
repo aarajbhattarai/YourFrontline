@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Frontline Cleaners</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/3295bfc304.js" crossorigin="anonymous"></script>
+    <link
+            href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+            rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/owl.carousel/owl.carousel.min.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/aos.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
+    <script>
+
+        // Activate smooth scroll on page load with hash links in the url
+        $(document).ready(function () {
+            if (window.location.hash) {
+                var initial_nav = window.location.hash;
+                if ($(initial_nav).length) {
+                    var scrollto = $(initial_nav).offset().top - scrolltoOffset;
+                    $('html, body').animate({
+                        scrollTop: scrollto
+                    }, 1500, 'easeInOutExpo');
+                }
+            }
+        });
+
+        // Navigation active state on scroll
+        var nav_sections = $('section');
+        var main_nav = $('.nav-menu, .mobile-nav');
+
+        $(window).on('scroll', function () {
+            var cur_pos = $(this).scrollTop() + 200;
+
+            nav_sections.each(function () {
+                var top = $(this).offset().top,
+                    bottom = top + $(this).outerHeight();
+
+                if (cur_pos >= top && cur_pos <= bottom) {
+                    if (cur_pos <= bottom) {
+                        main_nav.find('li').removeClass('active');
+                    }
+                    main_nav.find('a[href="#' + $(this).attr('id') + '"]').parent('li').addClass('active');
+                }
+                if (cur_pos < 300) {
+                    $(".nav-menu ul:first li:first, .mobile-menu ul:first li:first").addClass('active');
+                }
+            });
+        });
+
+    </script>
+
+</head>
+
+<body>
+
+<!-- ======= Top Bar ======= -->
+<div id="topbar" class="d-none d-lg-flex align-items-center fixed-top">
+    <div class="container d-flex">
+        <div class="contact-info mr-auto">
+            <i class="fas fa-envelope-open"></i> <a
+                href="mailto:yourfrontlinecleaners@gmail.com">yourfrontlinecleaners@gmail.com</a>
+            <i class="fas fa-phone-alt"></i> +1 646 2474 931
+        </div>
+        <div class="social-links">
+
+            <a href="#" class="facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+</div>
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+        <h1 class="logo mr-auto"><a href="#topimage">Frontline Cleaners</h1>
+
+        <!-- <a href="#topimage" class="logo mr-auto"><img src="" alt="Frontline Cleaners"></a>-->
+
+        <nav class="nav-menu d-none d-lg-block">
+            <ul>
+                <li class="active"><a href="#topimage">Home</a></li>
+                <li><a href="#whyfrontline">Why Frontline</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#contact">Contact</a></li>
+
+            </ul>
+        </nav><!-- .nav-menu -->
+
+    </div>
+</header><!-- End Header -->
+
+
+<!-- top image start -->
+<section id="topimage" class="d-flex align-items-center"
+         style="background-image:  url({{ url_for('static', filename='img/background.jpg') }})">
+    <div class="container" data-aos="zoom-out" data-aos-delay="100">
+
+        <h1>EXTREME CLEAN</h1>
+
+        <h2 style="padding-left:3%;">Got Dirt? We Got Clean!!<br>
+            We make a clean sweep of everything.<br>Our
+            business is to <span>make your business shine.</span>
+            <br>
+            Call Us!! We’re the Dust Busters
+        </h2>
+        <div class="d-flex">
+            <a href="#contact" class="btn-contact scrollto">Contact Us</a>
+        </div>
+    </div>
+</section>
+<!-- Top image  end-->
+<main id="main">
+
+    <!-- ======= Why FrontlineStart Section ======= -->
+    <section id="whyfrontline" class="whyfrontline">
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-title">
+                <h2 style="color: #111111;">Why Frontline?</h2>
+                <h3>Hire us if you <span>want</span></h3>
+
+            </div>
+            <div class="row">
+
+                <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                    <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                        <div class="icon"><i class="fas fa-broom"></i></div>
+                        <h4 class="title">Professional Cleaning</h4>
+                        <p class="description">We are the specialists in innovative cleaning solutions with the very
+                            latest materials and equipment to provide
+                            safe and efficient operations.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                    <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+                        <div class="icon"><i class="fas fa-dollar-sign"></i></div>
+                        <h4 class="title">Affordable Cost</h4>
+                        <p class="description">We pride on ourselves for offering brilliant value for money.
+                            Our cleaning rates are reasonable,exceptionally competitive and honest hourly prices.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                    <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+                        <div class="icon"><i class="fas fa-clock"></i></div>
+                        <h4 class="title">Flexible Timing</h4>
+                        <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+                            officia</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                    <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
+                        <div class="icon"><i class="fas fa-smile-beam"></i></div>
+                        <h4 class="title">Satisfaction</h4>
+                        <p class="description">
+                            Our goal is to establish a long-term relationship with our clients, based on mutual trust
+                            and our ability to provide consistently perfect results.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section><!-- End Featured Services Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-title">
+                <h2>Services</h2>
+                <h3>Check our <span>Services</span></h3>
+                <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque
+                    vitae
+                    autem.</p>
+            </div>
+
+            <div class="row featurette" data-aos="fade-right" data-aos-delay="500">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading"><strong>Sanization and Disinfection</strong></h2>
+                    <p class="lead">using green pet friendly chemicals we will sanitize every nook and cranny necessary
+                        ($55 per
+                        hour)</p>
+                </div>
+                <div class="col-md-5" data-aos="fade-down"
+                     data-aos-easing="linear"
+                     data-aos-duration="1500">
+
+                    <svg height="200" viewBox="0 0 512 512" width="200" xmlns="http://www.w3.org/2000/svg" role="img"
+                         aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"
+                         style="padding-top: 20%;">
+                        <g id="Outline">
+                            <path
+                                    d="m488 128h-24v-8a8 8 0 0 0 -8-8h-77.333l-29.867-22.4a8 8 0 0 0 -4.8-1.6h-14.459l1.43-.572a8 8 0 0 0 5.029-7.428 48.014 48.014 0 0 0 -48-48h-56v16h56a32.036 32.036 0 0 1 31.574 26.754l-33.115 13.246h-53.459a25.013 25.013 0 0 0 -21.9 12.954l-35.1-25.071v-27.883h40v-16h-80a8 8 0 0 0 -8 8v40a8 8 0 0 0 8 8h8a24 24 0 0 0 0 48h16v32a8 8 0 0 0 8 8h1.376a23.943 23.943 0 0 0 4.755 24 23.943 23.943 0 0 0 0 32 23.956 23.956 0 0 0 3.807 35.431 319.47 319.47 0 0 0 -12.487 34.269l15.324 4.6a303.329 303.329 0 0 1 12.612-34.3h38.613a23.984 23.984 0 0 0 17.869-40 23.943 23.943 0 0 0 0-32 23.943 23.943 0 0 0 0-32h31.885l6.225 24.89a318.39 318.39 0 0 0 24.105 65.156 303.15 303.15 0 0 1 23.831 65.754 302.5 302.5 0 0 1 8.085 69.46v70.74a16.019 16.019 0 0 1 -16 16h-144a16.019 16.019 0 0 1 -16-16v-70.74a302.857 302.857 0 0 1 6.76-63.578l-15.643-3.364a318.968 318.968 0 0 0 -7.117 66.942v70.74a32.036 32.036 0 0 0 32 32h144a32.036 32.036 0 0 0 32-32v-70.74a318.542 318.542 0 0 0 -8.514-73.139 319.185 319.185 0 0 0 -25.091-69.23 302.356 302.356 0 0 1 -22.895-61.882l-3.923-15.689a66.982 66.982 0 0 0 36.423 10.68v-16a50.837 50.837 0 0 1 -47.428-32.111l-1.144-2.861a8 8 0 0 0 -6.436-4.966l-49.112-6.14a9 9 0 0 1 1.12-17.922h108.333l29.867 22.4a8 8 0 0 0 4.8 1.6h72v112h-16v-88h-16v88h-72v16h112a8 8 0 0 0 8-8v-8h24a8 8 0 0 0 8-8v-96a8 8 0 0 0 -8-8zm-283.02-4.362a23.812 23.812 0 0 0 2.289-5.759l1.471 1.051a25.052 25.052 0 0 0 7.26 12.365v27.72l-.246.985h-14.816zm-60.98-75.638h16v24h-16zm-8 64a8.009 8.009 0 0 1 8-8h40a8 8 0 0 1 0 16h-40a8.009 8.009 0 0 1 -8-8zm51.536 23.738-2.696 24.262h-8.84v-24s10.382-.091 11.536-.262zm44.464 40.262a8 8 0 0 1 0 16h-40a8 8 0 0 1 0-16zm8 40a8.009 8.009 0 0 1 -8 8h-40a8 8 0 0 1 0-16h40a8.009 8.009 0 0 1 8 8zm-8 40h-40a8 8 0 0 1 0-16h40a8 8 0 0 1 0 16zm46.807-104h-46.807v-13.938l42.348 5.293a67.826 67.826 0 0 0 4.459 8.645zm201.193 72h-16v-80h16z"/>
+                            <path d="m72 72h32v16h-32z"/>
+                            <path d="m16 72h32v16h-32z"/>
+                            <path d="m83.022 24.134h16v32h-16z"
+                                  transform="matrix(.446 -.895 .895 .446 14.484 103.676)"/>
+                            <path d="m32.908-.859h16v32h-16z" transform="matrix(.446 -.895 .895 .446 9.102 44.992)"/>
+                            <path d="m75.022 111.141h32v16h-32z"
+                                  transform="matrix(.895 -.446 .446 .895 -43.604 53.145)"/>
+                            <path d="m24.908 136.133h32v16h-32z"
+                                  transform="matrix(.895 -.446 .446 .895 -60.025 33.407)"/>
+                            <path
+                                    d="m264 416a56.064 56.064 0 0 0 56-56v-32a8 8 0 0 0 -8-8h-64a56.064 56.064 0 0 0 -56 56v32a8 8 0 0 0 8 8zm-56-40a40.045 40.045 0 0 1 40-40h56v24a40.045 40.045 0 0 1 -40 40h-56z"/>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette" data-aos="fade-up">
+                <div class="col-md-7 order-md-2" data-aos="fade-left"
+                     data-aos-offset="300"
+                     data-aos-easing="ease-in-sine">
+                    <h2 class="featurette-heading"><strong>House Cleaning</strong></h2>
+                    <p class="lead">Professionally cleaning and sanitizing any dwelling $85 per hour</p>
+                </div>
+                <div class="col-md-5 order-md-1" data-aos="fade-right"
+                     data-aos-offset="300"
+                     data-aos-easing="ease-in-sine">
+                    <svg height="200" viewBox="0 0 64 64" width="200" xmlns="http://www.w3.org/2000/svg" role="img"
+                         aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <g id="clean-window-home-house-cleaner">
+                            <g fill="#bddbff">
+                                <path
+                                        d="m60.41 20.05-27.38-16.43a2 2 0 0 0 -2.06 0l-27.38 16.43a1.991 1.991 0 0 0 -.76 2.61l.2.41a1.992 1.992 0 0 0 2.82.81l.15-.09 24.97-15.03a2 2 0 0 1 2.06 0l24.97 15.03.15.09a1.992 1.992 0 0 0 2.82-.81l.2-.41a1.991 1.991 0 0 0 -.76-2.61z"/>
+                                <path
+                                        d="m61 59a2.015 2.015 0 0 1 -2 2h-54a2.006 2.006 0 0 1 -2-2 2.015 2.015 0 0 1 2-2h13v-8h8v8h33a2.006 2.006 0 0 1 2 2z"/>
+                                <path d="m32.66 36.03a2 2 0 0 1 2.34 1.97h2v-6h-8v6h2.01a2.046 2.046 0 0 1 1.65-1.97z"/>
+                                <circle cx="22" cy="37" r="4"/>
+                            </g>
+                            <path d="m43.764 31h4.472v2h-4.472z" fill="#57a4ff"
+                                  transform="matrix(.894 -.447 .447 .894 -9.454 23.95)"/>
+                            <path d="m43.764 35h4.472v2h-4.472z" fill="#57a4ff"
+                                  transform="matrix(.894 -.447 .447 .894 -11.243 24.372)"/>
+                            <path
+                                    d="m60.02 25.05a2.971 2.971 0 0 0 1.84-1.54l.21-.41a3.022 3.022 0 0 0 -1.14-3.91l-27.39-16.43a2.988 2.988 0 0 0 -3.08 0l-27.39 16.43a3.022 3.022 0 0 0 -1.14 3.91l.21.41a2.971 2.971 0 0 0 1.84 1.54 3.045 3.045 0 0 0 .84.12c.06 0 .12-.02.18-.02v30.85a3 3 0 0 0 0 6h54a3 3 0 0 0 0-6v-30.85a2.954 2.954 0 0 0 1.02-.1zm-43.02 34.95h-12a1 1 0 0 1 0-2h12zm0-4h-10v-31.64l24.48-14.74a1.02 1.02 0 0 1 1.04 0l24.48 14.74v31.64h-30v-6h25a1 1 0 0 0 1-1v-22a1 1 0 0 0 -1-1h-40a1 1 0 0 0 -1 1v22a1 1 0 0 0 1 1h5zm-1-13v5h-3v-20h38v20h-23v-2h5a3.009 3.009 0 0 0 3-3v-4h1a1 1 0 0 0 1-1v-6a1 1 0 0 0 -1-1h-8a1 1 0 0 0 -1 1v6a1 1 0 0 0 1 1h1v1h-4.03a4.924 4.924 0 0 0 1.03-3 5 5 0 0 0 -10 0 4.949 4.949 0 0 0 1.14 3.14 3 3 0 0 0 -2.14 2.86zm18.94-7.29a2.97 2.97 0 0 0 -4.74 1.29h-.2v-4h6v4h-.19a2.962 2.962 0 0 0 -.87-1.29zm-9.94 1.29a3 3 0 1 1 -3-3 3.009 3.009 0 0 1 3 3zm-4 23h-2v-10h2zm4 0h-2v-10h2zm1-15v3h-8v-5a1 1 0 0 1 1-1h12a1 1 0 0 0 1-1v-2.89a1.093 1.093 0 0 1 .82-1.1 1.026 1.026 0 0 1 .83.23 1.011 1.011 0 0 1 .35.76v5a1 1 0 0 1 -1 1h-6a1 1 0 0 0 -1 1zm34 14a1 1 0 0 1 -1 1h-32v-2h32a1 1 0 0 1 1 1zm-1.34-35.97-25.11-15.12a2.979 2.979 0 0 0 -3.1 0l-25.11 15.12a1.018 1.018 0 0 1 -.8.1.972.972 0 0 1 -.61-.51l-.21-.41a1.021 1.021 0 0 1 .38-1.31l27.39-16.43a1 1 0 0 1 1.02 0l27.39 16.43a1.021 1.021 0 0 1 .38 1.31l-.21.41a.972.972 0 0 1 -.61.51 1.023 1.023 0 0 1 -.8-.1z"
+                                    fill="#57a4ff"/>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette">
+                <div class="col-md-7" data-aos="fade-right"
+                     data-aos-offset="300"
+                     data-aos-easing="ease-in-sine">
+                    <h2 class="featurette-heading"><strong> Pressure Washing</strong></h2>
+                    <p class="lead">With the high-pressure water spray, it is possible to clean large surfaces,
+                        effectively removing dirt, dust, mud, grime, stains, salt, mold, chewing gum or anything</p>
+                </div>
+                <div class="col-md-5" data-aos="fade-left"
+                     data-aos-offset="300"
+                     data-aos-easing="ease-in-sine">
+                    <svg height="200" viewBox="0 0 57 58" width="200" xmlns="http://www.w3.org/2000/svg" role="img"
+                         aria-label="Placeholder: 200x200" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <g id="Page-1" fill="none" fill-rule="evenodd">
+                            <g id="039---Pressure-Washer" fill="rgb(0,0,0)" fill-rule="nonzero">
+                                <path id="Shape"
+                                      d="m29 50h-2.25l.2 1.73c.244788 2.0627959-.415295 4.1305696-1.81 5.67-.0491348.0441315-.0958685.0908652-.14.14v.46h4c.5522847 0 1-.4477153 1-1v-6c0-.5522847-.4477153-1-1-1z"/>
+                                <path id="Shape"
+                                      d="m3.07 51.73.2-1.73h-2.27c-.55228475 0-1 .4477153-1 1v6c0 .5522847.44771525 1 1 1h4v-.48l-.12-.12c-1.39470502-1.5394304-2.05478796-3.6072041-1.81-5.67z"/>
+                                <path id="Shape"
+                                      d="m16 35.14v2.86c0 .5522847-.4477153 1-1 1s-1-.4477153-1-1v-2.86c-1.9503067.503567-3.2219252 2.3787867-2.9681188 4.3770005s1.9538507 3.4959828 3.9681188 3.4959828 3.7143124-1.497769 3.9681188-3.4959828-1.0178121-3.8734335-2.9681188-4.3770005z"/>
+                                <path id="Shape"
+                                      d="m37.92 18.84-3.438-7.358c-.2339987-.4976656-.8259335-.7129958-1.325-.482-.4999472.2329002-.7169383.8266059-.485 1.327l3.428 7.353c.5366799-.4118131 1.1584328-.698776 1.82-.84z"/>
+                                <path id="Shape"
+                                      d="m39.8 29.97 3.62-1.69c.2414977-.1092684.4288952-.3110811.52-.56.0902151-.2508479.0794586-.5269316-.03-.77l-2.06-4.41c-.2298149-.4888752-.5984754-.8992709-1.06-1.18l-.41-.25c-.7819205-.4731356-1.7484945-.5244455-2.5761116-.1367511-.827617.3876944-1.4068941 1.163153-1.5438884 2.0667511l-.07.47c-.0880118.533529-.0112665 1.0812107.22 1.57l2.06 4.41c.1115059.2411151.3148864.4275639.5647614.5177444.2498751.0901804.5254509.076588.7652386-.0377444z"/>
+                                <path id="Shape"
+                                      d="m54.52 47.15c-.2820031-.2015997-.4406303-.5339616-.42-.88.0214907-.3445628.2228727-.6523352.53-.81 1.8122393-.9781366 2.7292442-3.0616605 2.2264443-5.058697-.5028-1.9970365-2.2970873-3.39793-4.3564443-3.401303-.4018912.0020163-.8018488.0557921-1.19.16l2.48 3.23c.163646.2088146.236733.4745257.2029016.7376588-.0338314.263133-.1717559.5017141-.3829016.6623412-.1745498.1354677-.3890506.2093122-.61.21-.3105502.0038215-.604191-.1411404-.79-.39l-8.62-11.2-2.01.94 3.39 14.42c.0640742.2574485.0216968.5298555-.1175573.755673s-.3636339.3859896-.6224427.444327c-.0750689.0197914-.1523661.0298736-.23.03-.4633897.0011027-.8659367-.3184448-.97-.77l-2.19-9.27c-2.9050952 1.6274276-4.3893073 4.9754369-3.6444385 8.2209367s3.5404388 5.6112641 6.8644385 5.8090633c.5287239.0317798.9409542.4703227.94 1-.0089579 2.8363366 1.9694414 5.2914938 4.7428362 5.8857726 2.7733947.5942788 5.5840768-.8346814 6.7380758-3.4256604 1.153999-2.5909789.3360355-5.6361056-1.960912-7.3001122z"/>
+                                <path id="Shape"
+                                      d="m24.745 16.368c-1.7095711-1.3294042-3.5279877-2.5125792-5.436-3.537-1.8654336-.994461-3.6390414-2.1523258-5.3-3.46-.8868116-.6536235-1.552852-1.56249482-1.909-2.605-.2162767-.66911636-.1134283-1.40048277.279-1.984.971-1.452 3.656-2.392 5.885-2.682 2.6-.326 6.132.134 7.5 2.507.007.013.019.019.027.031-.3848136.24536136-.5504138.72311786-.4 1.154l-.142.066c-.4828728.22243289-.8569259.62848611-1.0390629 1.12795452-.1821369.49946841-.1572749 1.05099065.0690629 1.53204548l.42.91c.2259199.47904802.6321274.8493079 1.13 1.03.4974647.1856461 1.0486012.1640329 1.53-.06l.132-.063.038.082c.1134015.2429014.3195789.4301021.572268.5195961.2526891.0894941.5307297.0737872.771732-.0435961l4.364-2.123c.4904476-.23872786.699109-.82645002.469-1.321l-2.106-4.529c-.1134164-.24238025-.3192477-.42919066-.5714559-.5186475-.2522081-.08945683-.5297486-.07409573-.7705441.0426475l-2.711 1.318c-.0111488-.0519548-.0268769-.10282016-.047-.152-1.858-3.217-6.113-3.918-9.488-3.492-2.606.336-5.89 1.446-7.294 3.555-.7112111 1.06553326-.91028491 2.39269235-.543 3.62.4577793 1.43946585 1.3499509 2.70192014 2.554 3.614 1.7504827 1.3814781 3.6193891 2.6058879 5.585 3.659 1.8112143.9693881 3.537933 2.0889789 5.162 3.347 3.737 3.071 6.1 6.9 6.469 10.5.511 4.918-2.789 8.735-6.311 12.08l-.274-2.373c-.0637707-.5392238-.1844431-1.0701822-.36-1.584v-10.536c-.0033074-3.3123376-2.6876624-5.9966926-6-6h-4c-3.31233757.0033074-5.99669262 2.6876624-6 6v10.589c-.1651849.4974204-.27910991 1.0104181-.34 1.531l-1.61 13.84c-.17069481 1.4959962.31014557 2.9931583 1.32 4.11 1.11720596 1.2395606 2.71131307 1.9419868 4.38 1.93h8.52c1.4903352.0039163 2.9267853-.5570853 4.02-1.57 0-.01 0-.01.01-.01.12-.11.23-.23.34-.35 1.0183825-1.1119072 1.5005013-2.6130498 1.32-4.11l-1.04-8.994c4.235-3.905 8.677-8.374 8.016-14.759-.43-4.121-3.05-8.436-7.191-11.839zm-11.745 5.632h4c2.209139 0 4 1.790861 4 4v7.394c-3.3632387-3.1992677-8.6469091-3.1909019-12 .019v-7.413c0-2.209139 1.790861-4 4-4zm-2.25 34c-1.09583698.0103157-2.14384413-.4481874-2.88-1.26-.63183823-.6903097-.93445446-1.6200342-.83-2.55.02748113-.2651985.16076761-.5081024.36969426-.6737379.20892666-.1656356.47583029-.2399996.74030574-.2062621.54797196.0662921.94045278.5613531.88 1.11-.04280381.3626652.07815784.7255501.33.99.35642686.3881176.863217.60323 1.39.59.5522847 0 1 .4477153 1 1s-.4477153 1-1 1zm4.25-11c-3.3137085 0-6-2.6862915-6-6s2.6862915-6 6-6 6 2.6862915 6 6-2.6862915 6-6 6z"/>
+                            </g>
+                        </g>
+                    </svg>
+
+                </div>
+            </div>
+
+        </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials">
+        <div class="container" data-aos="zoom-in">
+            <div class="section-title">
+                <h2>Testimonials</h2>
+
+                <h3>What our clients have to say about us</h3>
+            </div>
+
+
+            <div class="owl-carousel testimonials-carousel">
+
+                <div class="testimonial-item">
+                    <img src="" class="testimonial-img" alt="">
+                    <h3>Saul Goodman</h3>
+                    <h4>Ceo &amp; Founder</h4>
+                    <p>
+                        <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                        Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus.
+                        Accusantium
+                        quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                        <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                    </p>
+                </div>
+
+                <div class="testimonial-item">
+                    <img src="" class="testimonial-img" alt="">
+                    <h3>Sara Wilsson</h3>
+                    <h4>Hotel Manager</h4>
+                    <p>
+                        <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                        Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram
+                        malis
+                        quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                        <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                    </p>
+                </div>
+
+                <div class="testimonial-item">
+                    <img src="" class="testimonial-img" alt="">
+                    <h3>Jena Karlis</h3>
+                    <h4>Store Owner</h4>
+                    <p>
+                        <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                        Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis
+                        minim tempor
+                        labore quem eram duis noster aute amet eram fore quis sint minim.
+                        <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                    </p>
+                </div>
+
+                <div class="testimonial-item">
+                    <img src="" class="testimonial-img" alt="">
+                    <h3>Matt Brandon</h3>
+                    <h4>Freelancer</h4>
+                    <p>
+                        <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                        Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim
+                        velit minim
+                        dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+                        <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                    </p>
+                </div>
+
+                <div class="testimonial-item">
+                    <img src="" class="testimonial-img" alt="">
+                    <h3>John Larson</h3>
+                    <h4>Entrepreneur</h4>
+                    <p>
+                        <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                        Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim
+                        culpa
+                        labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
+                        <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section><!-- End Testimonials Section -->
+
+    <!-- ======= Pricing Section ======= -->
+    <section id="pricing" class="pricing">
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-title">
+                <h2>Pricing</h2>
+                <h3>Check our <span>Pricing</span></h3>
+                <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque
+                    vitae
+                    autem.</p>
+            </div>
+
+            <div class="row">
+
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="box">
+                        <h3>Home</h3>
+                        <h4><sup>$</sup>10</h4>
+                        <ul>
+                            <li>Carpet Cleaning</li>
+                            <li class="na">Service</li>
+                            <li class="na">Service</li>
+                            <li class="na">Service</li>
+                            <li class="na">Service</li>
+                        </ul>
+                        <div class="btn-wrap">
+                            <a href="#" class="btn-buy">Book now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="200">
+                    <div class="box ">
+                        <h3>Business</h3>
+                        <h4><sup>$</sup>19</h4>
+                        <ul>
+                            <li>Roof Cleaning</li>
+                            <li>Service</li>
+                            <li class="na">Service</li>
+                            <li class="na"> Service</li>
+
+                            <li class="na">Service</li>
+                        </ul>
+                        <div class="btn-wrap">
+                            <a href="#contact" class="btn-buy">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="300">
+                    <div class="box">
+                        <h3>Package</h3>
+                        <h4><sup>$</sup>29</h4>
+                        <ul>
+                            <li>Roof Cleaning</li>
+                            <li>Service</li>
+                            <li>Service</li>
+                            <li>Service</li>
+                            <li>Service</li>
+                        </ul>
+                        <div class="btn-wrap">
+                            <a href="#" class="btn-buy">Book now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="400">
+                    <div class="box featured">
+                        <span class="recommended">Recommended</span>
+                        <h3>Ultimate</h3>
+                        <h4><sup>$</sup>149<span> / month</span></h4>
+                        <ul>
+                            <li>Roof Cleaning</li>
+                            <li>Service</li>
+                            <li>Service</li>
+                            <li>Service</li>
+                            <li>Service</li>
+                        </ul>
+                        <div class="btn-wrap">
+                            <a href="#" class="btn-buy">Book now</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section><!-- End Pricing Section -->
+
+
+    <!-- ======= Frequently Asked Questions Section ======= -->
+    <section id="faq" class="faq section-bg">
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-title">
+                <h2>F.A.Q</h2>
+                <h3>Frequently Asked <span>Questions</span></h3>
+                <p>Some of the common doubts</p>
+            </div>
+
+            <ul class="faq-list" data-aos="fade-up" data-aos-delay="100">
+
+                <li>
+                    <a data-toggle="collapse" class="" href="#faq1">What cleaning products do Quick Cleaning use?
+                        <i class="fas fa-chevron-up"></i></a>
+                    <div id="faq1" class="collapse show" data-parent=".faq-list">
+                        <p>
+                            We use natural and chemical-free cleaning products for the cleaning process.
+                            In addition to that, we won’t repeat the used cleaning tools for the next booking.
+                        </p>
+                    </div>
+                </li>
+
+                <li>
+                    <a data-toggle="collapse" href="#faq2" class="collapsed"> Is Frontline Cleanrrs available on
+                        weekends?<i
+                                class="fas fa-chevron-up"></i></a>
+                    <div id="faq2" class="collapse" data-parent=".faq-list">
+                        <p>
+                            Yes, Frontline Cleaning Services are available in Weekends. If you need the cleaning service
+                            at the
+                            weekends may be after a party, don’t hesitate to contact us.
+                            Our professional cleaners will reach your doorstep and will do the job for you.
+                        </p>
+                    </div>
+                </li>
+
+                <li>
+                    <a data-toggle="collapse" href="#faq3" class="collapsed">How often should you hire a cleaning
+                        company?
+                        <i class="fas fa-chevron-up"></i></a>
+                    <div id="faq3" class="collapse" data-parent=".faq-list">
+                        <p>
+                            You can hire a cleaning company when you need.
+                            If you need a regular cleaning services, then you can hire the professional cleaners from
+                            Frontline
+                            Cleaners, So our professional cleaners will come to your place regularly for cleaning.
+                        </p>
+                    </div>
+                </li>
+
+                <li>
+                    <a data-toggle="collapse" href="#faq4" class="collapsed">How many hours do I need? <i
+                            class="fas fa-chevron-up"></i></a>
+                    <div id="faq4" class="collapse" data-parent=".faq-list">
+                        <p>
+                            It depends on the size of building, how many rooms and how much is in them, plus the quality
+                            and depth
+                            of cleaning that you require.
+                            The choice is yours, and you may want fewer or more hours and then prioritise the rooms and
+                            jobs to be
+                            completed.
+                        </p>
+                    </div>
+                </li>
+
+                <li>
+                    <a data-toggle="collapse" href="#faq5" class="collapsed">How do you vet the cleaners?
+                        <i class="fas fa-chevron-up"></i></a>
+                    <div id="faq5" class="collapse" data-parent=".faq-list">
+                        <p>
+                            We first carry out a telephone interview.
+                            If the applicant seems suitable, we then arrange for a more thorough interview to take place
+                            in their
+                            own home. Only after taking proof of ID and address along with references do we accept them
+                            onto our
+                            database. We then monitor every cleaner thoroughly for the whole time they are with us.
+                        </p>
+                    </div>
+                </li>
+
+                <li>
+                    <a data-toggle="collapse" href="#faq6" class="collapsed"> Can I change my cleaner if I am not
+                        happy?<i
+                                class="fas fa-chevron-up"></i></a>
+                    <div id="faq6" class="collapse" data-parent=".faq-list">
+                        <p>
+                            Yes, of course, we have a large and varied cleaner base, and we'd be happy to assign you
+                            someone
+                            different if you are unhappy for any reason.
+                            Just give us a call.
+
+                        </p>
+                    </div>
+                </li>
+
+            </ul>
+
+        </div>
+    </section>
+    <!-- End Frequently Asked Questions Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-title">
+                <h2>Contact</h2>
+                <h3><span>What do you have to say to us</span></h3>
+                <p>Please fill the contact form below and a member of our team contact you
+                    shortly. We aim to deal with all enquiries within 24 hours.</p>
+            </div>
+
+            <div class="row" data-aos="fade-up" data-aos-delay="100">
+                <div class="col-lg-6">
+                    <div class="info-box mb-4">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <h3>Our Address</h3>
+                        <p>Austin,Texas</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="info-box  mb-4">
+                        <i class="fas fa-envelope-open"></i>
+                        <h3>Email Us</h3>
+                        <p> yourfrontlinecleaners@gmail.com</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="info-box mb-4">
+                        <i class="fas fa-phone-alt"></i>
+                        <h3>Call Us</h3>
+                        <p>+1 646 2474 931</p>
+                    </div>
+                </div>
+
+            </div>{% if success %}
+            <h3>Thank you for your message. We'll get back to you shortly.</h3>
+
+        {% else %}
+
+            <div class="row" data-aos="fade-up" data-aos-delay="100">
+
+
+            <div class="col">
+            <form action="#" method="post" role="form" class="flaskcontact">
+                <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+
+                <div class="form-row">
+                    <div class="col form-group">
+                        {{ form.name(placeholder="Name",class="form-control") }}
+                    </div>
+                    <div class="col form-group">
+                        {{ form.number(placeholder="Number",class="form-control") }}
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col form-group">
+                        {{ form.email(placeholder="Email",class="form-control") }}
+                    </div>
+                    <div class="col form-group">
+                        {{ form.address(placeholder="Address",class="form-control") }}
+                    </div>
+                </div>
+                <div class="form-group">
+                    {{ form.message(placeholder="Message",class="form-control",rows='6',cols='6') }}
+                </div>
+
+                <div class="text-center">
+                    <input type="submit" value="Send Message" class="btn btn-primary ml-1 mt-5">
+                </div>
+            </form>
+        {% endif %}
+            </div>
+
+            </div>
+
+        </div>
+    </section><!-- End Contact Section -->
+
+</main><!-- End main -->
+
+<!-- ======= Footer ======= -->
+<footer id="footer">
+    <div class="container py-4">
+        <div class="copyright">
+            All Rights Reserved &copy; Copyright:Frontline Cleaners
+        </div>
+        <div class="credits">
+            Designed by <a href="https://www.linkedin.com/in/aaraj-bhattarai-7303bb1aa/">Aaraj Bhattarai</a>
+        </div>
+    </div>
+</footer><!-- End Footer -->
+
+<div id="preloader"></div>
+<a href="#topimage" class="back-to-top"><i class="fas fa-chevron-up"></i></a>
+
+<script src="{{ url_for('static', filename= 'js/jquery.min.js') }}"></script>
+<script src="{{ url_for('static', filename= 'js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ url_for('static', filename= 'js/counterup.min.js') }}"></script>
+<script src="{{ url_for('static', filename= 'js/jquery.easing.min.js') }}"></script>
+<script src="{{ url_for('static', filename= 'js/owl.carousel/owl.carousel.min.js') }}"></script>
+<script src="{{ url_for('static', filename= 'js/aos.js') }}"></script>
+<script src="{{ url_for('static', filename= 'js/frontline.js') }}"></script>
+
+<script>
+    AOS.init();
+</script>
+
+</body>
+
+</html>
