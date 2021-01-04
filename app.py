@@ -38,7 +38,7 @@ def index():
         email = request.form['email']
         address = request.form['address']
         number = request.form['number']
-        msg = Message('Frontline Query', recipients=['aarajbhattarai@gmail.com'])
+        msg = Message('Frontline Query', recipients=['aarajbhattarai@gmail.com','metallicanup@gmail.com','yudeep@gmail.com'])
         msg.body = ("Name:{0}\n"
                     "\nEmail:{1}"
                     "\n Number:{2}"

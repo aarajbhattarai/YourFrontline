@@ -156,7 +156,6 @@
         items: 1
     });
 
-
     // Init AOS
     function aos_init() {
         AOS.init({
@@ -164,9 +163,5 @@
             once: true
         });
     }
-
-    $(window).on('load', function () {
-        aos_init();
-    });
 
 })(jQuery);

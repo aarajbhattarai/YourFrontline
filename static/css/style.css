@@ -1,4 +1,3 @@
-
 body {
     font-family: "Roboto", sans-serif;
     color: #444444;
@@ -95,9 +94,12 @@ body {
     background: #fff;
     transition: all 0.5s;
     z-index: 997;
-    padding: 25px 0;
+    padding: 5px 0;
     top: 40px;
     box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    height:120px;
+
 }
 
 #header.header-scrolled {
@@ -105,34 +107,14 @@ body {
     padding: 15px;
 }
 
-#header .logo {
-    font-size: 32px;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    font-weight: 600;
-    letter-spacing: 1px;
-    font-family: "Poppins", sans-serif;
-}
 
-#header .logo a {
-    color: #222222;
-}
-
-
-#header .logo img {
-    max-height: 40px;
-}
 
 @media (max-width: 992px) {
     #header {
         padding: 15px;
         top: 0;
     }
-
-    #header .logo {
-        font-size: 28px;
-    }
+=
 }
 
 /*--------------------------------------------------------------
@@ -152,7 +134,7 @@ body {
 .nav-menu > ul > li {
     position: relative;
     white-space: nowrap;
-    padding: 10px 0 10px 28px;
+    padding: 10px 0 10px 30px;
 }
 
 .nav-menu a {
@@ -160,7 +142,7 @@ body {
     position: relative;
     color: #222222;
     transition: 0.3s;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
     padding: 0 3px;
     font-family: "Open Sans", sans-serif;
@@ -269,14 +251,12 @@ body {
 .mobile-nav-active .mobile-nav-toggle i {
     color: #fff;
 }
-
 /*--------------------------------------------------------------
 # topimage Section
 --------------------------------------------------------------*/
 #topimage {
-    width: 100%;
-    height: 90vh;
-       background-size: cover;
+   margin-top: 200px;
+    background-size: cover;
     position: relative;
 }
 
