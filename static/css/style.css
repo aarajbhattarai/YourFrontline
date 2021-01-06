@@ -45,7 +45,7 @@ body {
 # Top Bar
 --------------------------------------------------------------*/
 #topbar {
-    background: #1db954;
+    background: #8cc741;
     height: 35px;
     font-size: 14px;
     transition: all 0.5s;
@@ -155,7 +155,7 @@ body {
     height: 2px;
     bottom: -5px;
     left: 0;
-    background-color: #1DB954;
+    background-color: #8cc741;
     visibility: hidden;
     width: 0;
     transition: all 0.3s ease-in-out 0s;
@@ -167,7 +167,7 @@ body {
 }
 
 .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
-    color: #1DB954;
+    color: #8cc741;
 }
 
 /* Mobile Navigation */
@@ -188,6 +188,7 @@ body {
 
 .mobile-nav-toggle i {
     color: #222222;
+    padding-top: 30px;
 }
 
 .mobile-nav {
@@ -251,24 +252,19 @@ body {
 .mobile-nav-active .mobile-nav-toggle i {
     color: #fff;
 }
-/*--------------------------------------------------------------
-# topimage Section
---------------------------------------------------------------*/
+
 #topimage {
-   margin-top: 200px;
-    background-size: cover;
-    position: relative;
+height:90vh;
+margin-top: 10%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
 
-#topimage:before {
-    content: "";
-    background: rgba(255, 255, 255, 0.6);
-    position: absolute;
-    bottom: 0;
-    top: 0;
-    left: 0;
-    right: 0;
 }
+
+
 
 #topimage .container {
     position: relative;
@@ -277,7 +273,7 @@ body {
 
 @media (max-width: 992px) {
     #topimage .container {
-        padding-top: 58px;
+        padding-top: 10%;
     }
 }
 
@@ -373,7 +369,7 @@ section {
     padding: 8px 20px;
     margin: 0;
     background: #e7f1fd;
-    color: #1DB954;
+    color: #8cc741;
     display: inline-block;
     text-transform: uppercase;
     border-radius: 50px;
@@ -386,7 +382,7 @@ section {
 }
 
 .section-title h3 span {
-    color: #1DB954;
+    color: #8cc741;
 }
 
 .section-title p {

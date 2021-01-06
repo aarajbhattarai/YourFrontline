@@ -8,6 +8,7 @@
     <meta content="" name="description">
     <meta content="" name="keywords">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
     <script src="https://kit.fontawesome.com/3295bfc304.js" crossorigin="anonymous"></script>
     <link
             href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
@@ -41,9 +42,10 @@
 </div>
 <!-- ======= Header ======= -->
 <header id="header" class="fixed-top">
-    <div class="container d-flex align-items-center" style="align-items: flex-end;">
-        <a class="navbar-brand" href="#">
-            <img src="{{ url_for('static', filename='img/Texas_Cleaners.png') }}" class='img-fluid' alt="" width="200px"
+    <div class="container d-flex align-items-center">
+        <a class="navbar-brand" href="#topimage">
+            <img src="{{ url_for('static', filename='img/Texas_Cleaners.png') }}" class='img-fluid'
+                 alt="Cleaners in Texas" width="200px"
                  height="70px">
         </a>
         <nav class="nav-menu d-none d-lg-block ml-auto">
@@ -63,8 +65,8 @@
 
 
 <!-- top image start -->
-<section id="topimage" class="d-flex align-items-center"
-         style="background-image:  url({{ url_for('static', filename='img/background.jpg') }})">
+<section id="topimage" class="d-flex align-items-center "
+         style="background-image:  url({{ url_for('static', filename='img/background.jpg') }});">
     <div class="container" data-aos="zoom-out" data-aos-delay="100">
 
         <h1>EXTREME CLEAN</h1>
@@ -98,9 +100,11 @@
                     <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
                         <div class="icon"><i class="fas fa-broom"></i></div>
                         <h4 class="title">Professional Cleaning</h4>
-                        <p class="description">We are the specialists in innovative cleaning solutions with the very
-                            latest materials and equipment to provide
-                            safe and efficient operations.
+                        <p class="description">Our goal is to
+                            get aligned with your needs
+                            to provide innovative cleaning solutions and services using the
+                            modern methods to provide
+                            efficient and eco-friendly operations.
                         </p>
                     </div>
                 </div>
@@ -118,8 +122,8 @@
                     <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
                         <div class="icon"><i class="fas fa-clock"></i></div>
                         <h4 class="title">Flexible Timing</h4>
-                        <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-                            officia</p>
+                        <p class="description">We are available 24 hours to provide our services.We are always
+                            endeavoured towards earning our client's trust by being accordant on our services.</p>
                     </div>
                 </div>
 
@@ -155,8 +159,7 @@
                     <p class="lead">To protect our customers from COVID-19 Coronavirus,we offer sanization
                         and disinfection services to our clients using green,pet friendly and hospital grade
                         disinfectants to sanitize every nook and cranny necessary
-                        ($55 per
-                        hour)</p>
+                        Your health and hygiene is always a top priority for us.</p>
                 </div>
                 <div class="col-md-5" data-aos="fade-down"
                      data-aos-easing="linear"
@@ -205,7 +208,7 @@
                      data-aos-easing="ease-in-sine">
                     <svg height="200" viewBox="0 0 64 64" width="200" xmlns="http://www.w3.org/2000/svg" role="img"
                          aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"
-                         style="margin-top: 20%;">
+                         style="margin-top: 20%; margin-left: 10%;">
                         <g id="clean-window-home-house-cleaner">
                             <g fill="#bddbff">
                                 <path
@@ -395,7 +398,7 @@
                             <li class="na">Service</li>
                         </ul>
                         <div class="btn-wrap">
-                            <a href="#contact" class="btn-buy">Book Now</a>
+                            <a href="#contact" class="btn-buy">Contact Now</a>
                         </div>
                     </div>
                 </div>
@@ -408,11 +411,11 @@
                             <li>Roof Cleaning</li>
                             <li>Service</li>
                             <li>Service</li>
-                            <li>Service</li>
-                            <li>Service</li>
+                            <li class="na">Service</li>
+                            <li class="na">Service</li>
                         </ul>
                         <div class="btn-wrap">
-                            <a href="#" class="btn-buy">Book now</a>
+                            <a href="#contact" class="btn-buy">Contact now</a>
                         </div>
                     </div>
                 </div>
@@ -430,7 +433,7 @@
                             <li>Service</li>
                         </ul>
                         <div class="btn-wrap">
-                            <a href="#" class="btn-buy">Book now</a>
+                            <a href="#contact" class="btn-buy">Contact now</a>
                         </div>
                     </div>
                 </div>
@@ -459,7 +462,7 @@
                     <div id="faq1" class="collapse show" data-parent=".faq-list">
                         <p>
                             We use natural and chemical-free cleaning products for the cleaning process.
-                            In addition to that, we won’t repeat the used cleaning tools for the next booking.
+                            We also don't repeat the used cleaning tools for another booking.
                         </p>
                     </div>
                 </li>
@@ -470,7 +473,7 @@
                                 class="fas fa-chevron-up"></i></a>
                     <div id="faq2" class="collapse" data-parent=".faq-list">
                         <p>
-                            Yes, Frontline Cleaning Services are available in Weekends. If you need the cleaning service
+                            Yes,Frontline Cleaning Services are available in Weekends. If you need the cleaning service
                             at the
                             weekends may be after a party, don’t hesitate to contact us.
                             Our professional cleaners will reach your doorstep and will do the job for you.
@@ -579,43 +582,44 @@
                     </div>
                 </div>
 
-            </div>{% if success %}
-            <h3>Thank you for your message. We'll get back to you shortly.</h3>
+            </div>
+            {% if success %}
+                <h3>Thank you for your message. We'll get back to you shortly.</h3>
 
-        {% else %}
+            {% else %}
 
-            <div class="row" data-aos="fade-up" data-aos-delay="100">
+                <div class="row" data-aos="fade-up" data-aos-delay="100">
 
 
-            <div class="col">
-            <form action="#" method="post" role="form" class="flaskcontact">
-                <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+                <div class="col">
+                <form action="#" method="post" role="form" class="flaskcontact">
+                    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
 
-                <div class="form-row">
-                    <div class="col form-group">
-                        {{ form.name(placeholder="Name",class="form-control") }}
+                    <div class="form-row">
+                        <div class="col form-group">
+                            {{ form.name(placeholder="Name",class="form-control") }}
+                        </div>
+                        <div class="col form-group">
+                            {{ form.number(placeholder="Number",class="form-control") }}
+                        </div>
                     </div>
-                    <div class="col form-group">
-                        {{ form.number(placeholder="Number",class="form-control") }}
+                    <div class="form-row">
+                        <div class="col form-group">
+                            {{ form.email(placeholder="Email",class="form-control") }}
+                        </div>
+                        <div class="col form-group">
+                            {{ form.address(placeholder="Address",class="form-control") }}
+                        </div>
                     </div>
-                </div>
-                <div class="form-row">
-                    <div class="col form-group">
-                        {{ form.email(placeholder="Email",class="form-control") }}
+                    <div class="form-group">
+                        {{ form.message(placeholder="Message",class="form-control",rows='6',cols='6') }}
                     </div>
-                    <div class="col form-group">
-                        {{ form.address(placeholder="Address",class="form-control") }}
-                    </div>
-                </div>
-                <div class="form-group">
-                    {{ form.message(placeholder="Message",class="form-control",rows='6',cols='6') }}
-                </div>
 
-                <div class="text-center">
-                    <input type="submit" value="Send Message" class="btn btn-primary ml-1 mt-5">
-                </div>
-            </form>
-        {% endif %}
+                    <div class="text-center">
+                        <input type="submit" value="Send Message" class="btn btn-primary ml-1 mt-5">
+                    </div>
+                </form>
+            {% endif %}
             </div>
 
             </div>
@@ -629,10 +633,12 @@
 <footer id="footer">
     <div class="container py-4">
         <div class="copyright">
-            All Rights Reserved &copy; Copyright:Frontline Cleaners
+            All Rights Reserved &copy; Copyright:Your Frontline Cleaners
         </div>
         <div class="credits">
-            Designed by <a href="https://www.linkedin.com/in/aaraj-bhattarai-7303bb1aa/">Aaraj Bhattarai</a>
+            Designed by <a href="https://www.linkedin.com/in/aaraj-bhattarai-7303bb1aa/">Aaraj Bhattarai(Do remember me
+            for IT services!)</a>
+
         </div>
     </div>
 </footer><!-- End Footer -->
@@ -641,8 +647,8 @@
 <a href="#topimage" class="back-to-top"><i class="fas fa-chevron-up"></i></a>
 
 <script src="{{ url_for('static', filename= 'js/jquery.min.js') }}"></script>
-<script src="{{ url_for('static', filename= 'js/bootstrap.bundle.min.js') }}"></script>
-<script src="{{ url_for('static', filename= 'js/counterup.min.js') }}"></script>
+
+<script src="{{ url_for('static', filename= 'js/bootstrap.min.js') }}"></script>
 <script src="{{ url_for('static', filename= 'js/jquery.easing.min.js') }}"></script>
 <script src="{{ url_for('static', filename= 'js/owl.carousel/owl.carousel.min.js') }}"></script>
 <script src="{{ url_for('static', filename= 'js/aos.js') }}"></script>

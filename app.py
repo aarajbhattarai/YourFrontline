@@ -7,6 +7,7 @@ from wtforms.validators import DataRequired, Email
 from wtforms.fields.html5 import EmailField
 
 app = Flask(__name__)
+
 app.config['SECRET_KEY'] = secrets.token_urlsafe(16)
 csrf = CSRFProtect(app)
 
@@ -47,10 +48,9 @@ def index():
         return render_template('index.html', success=True)
 
     else:
-        flash('All fields are required.')
+
         return render_template('index.html', form=form)
 
 
 if __name__ == '__main__':
-    app.debug = True
     app.run()
