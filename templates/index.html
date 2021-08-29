@@ -67,7 +67,7 @@
 
 <!-- top image start -->
 <section id="topimage" class="d-flex align-items-center "
-         style="background-image:  url({{ url_for('static', filename='img/background.jpg') }}); opacity: 0.7;">
+         style="background-image:  url( {{ url_for('static', filename='img/background.jpg') }} ); opacity: 0.7;">
     <div class="container" data-aos="zoom-out" data-aos-delay="100">
 
         <h1>EXTREME CLEAN</h1>
@@ -280,13 +280,11 @@
 
                 <h3>What our clients have to say about us</h3>
             </div>
-
-
             <div class="owl-carousel testimonials-carousel">
 
                 <div class="testimonial-item">
                     <img src="{{ url_for('static', filename='img/Cleaning-Company-Client1.jpg') }}" class="testimonial-img" alt="">
-                    <h3>Sara Wilsson</h3>
+                    <h3>Mukunda Bhattarai/h3>
                     <h4> Manager</h4>
                     <p>
                         <i class="bx bxs-quote-alt-left quote-icon-left"></i>

@@ -6,21 +6,21 @@ from wtforms import StringField, TextAreaField, SubmitField
 from wtforms.validators import DataRequired, Email
 from wtforms.fields.html5 import EmailField
 
-app = Flask(__name__)
+application = Flask(__name__)
 
-app.config['SECRET_KEY'] = secrets.token_urlsafe(16)
-csrf = CSRFProtect(app)
+application.config['SECRET_KEY'] = secrets.token_urlsafe(16)
+csrf = CSRFProtect(application)
 
-mail = Mail(app)
-app.config['MAIL_SERVER'] = 'smtp.gmail.com'
-app.config['MAIL_PORT'] = 465
+mail = Mail(application)
+application.config['MAIL_SERVER'] = 'smtp.gmail.com'
+application.config['MAIL_PORT'] = 465
 MAIL_DEFAULT_SENDER = 'aarajbhattarai11@gmail.com'
-app.config['MAIL_USERNAME'] = 'aarajbhattarai11@gmail.com'
-app.config['MAIL_PASSWORD'] = '#9851CLFA58A0D8183629r'
-app.config['MAIL_DEFAULT_SENDER'] = 'aarajbhattarai11@gmail.com'
-app.config['MAIL_USE_TLS'] = False
-app.config['MAIL_USE_SSL'] = True
-mail = Mail(app)
+application.config['MAIL_USERNAME'] = 'aarajbhattarai11@gmail.com'
+application.config['MAIL_PASSWORD'] = '#9851CLFA58A0D8183629r'
+application.config['MAIL_DEFAULT_SENDER'] = 'aarajbhattarai11@gmail.com'
+application.config['MAIL_USE_TLS'] = False
+application.config['MAIL_USE_SSL'] = True
+mail = Mail(application)
 
 class ContactForm(FlaskForm):
     name = StringField("Name", validators=[DataRequired()])
@@ -30,7 +30,7 @@ class ContactForm(FlaskForm):
     message = TextAreaField("Message", validators=[DataRequired()])
     submit = SubmitField("Send")
 
-@app.route('/', methods=['GET', 'POST'])
+@application.route('/', methods=['GET', 'POST'])
 def index():
     form = ContactForm()
     if request.method == 'POST' and form.validate_on_submit():
@@ -53,4 +53,4 @@ def index():
 
 
 if __name__ == '__main__':
-    app.run()
+    application.run()
